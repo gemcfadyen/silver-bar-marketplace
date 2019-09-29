@@ -23,7 +23,7 @@ public class CancelOrderTest {
     cancelOrder = new CancelOrder(dataStore);
     order =
         OrderBuilder.anOrderBuilder()
-            .withQuanityOf(1.2f)
+            .withQuantityOf(1.2)
             .withPricePerKgOf(new BigDecimal(300))
             .withOrderType(OrderType.BUY)
             .build();

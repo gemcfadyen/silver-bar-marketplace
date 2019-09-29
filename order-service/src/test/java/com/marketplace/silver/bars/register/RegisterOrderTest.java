@@ -24,7 +24,7 @@ public class RegisterOrderTest {
     order =
         OrderBuilder.anOrderBuilder()
             .withUserId("user1")
-            .withQuanityOf(3.5f)
+            .withQuantityOf(3.5)
             .withPricePerKgOf(new BigDecimal(303))
             .withOrderType(OrderType.SELL)
             .build();

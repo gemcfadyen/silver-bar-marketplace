@@ -19,7 +19,8 @@ public class InMemoryDataStore implements DataStore {
     dataStore.remove(order);
   }
 
-  protected List<Order> getDataStore() {
+  @Override
+  public List<Order> getAll() {
     return dataStore;
   }
 }

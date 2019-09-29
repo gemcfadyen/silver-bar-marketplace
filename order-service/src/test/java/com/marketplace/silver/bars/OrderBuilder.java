@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class OrderBuilder {
   private String userId;
-  private float quanity;
+  private double quantity;
   private BigDecimal pricePerKg;
   private OrderType orderType;
 
@@ -13,7 +13,7 @@ public class OrderBuilder {
   }
 
   public Order build() {
-    return new Order(userId, quanity, pricePerKg, orderType);
+    return new Order(userId, quantity, pricePerKg, orderType);
   }
 
   public OrderBuilder withUserId(String userId) {
@@ -21,8 +21,8 @@ public class OrderBuilder {
     return this;
   }
 
-  public OrderBuilder withQuanityOf(float quantity) {
-    this.quanity = quantity;
+  public OrderBuilder withQuantityOf(double quantity) {
+    this.quantity = quantity;
     return this;
   }
 
