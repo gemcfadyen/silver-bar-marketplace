@@ -28,7 +28,7 @@ public class SummaryInformationTest {
 
   @Test
   public void fetchesAllOrdersFromDataStore() {
-    orderSummary.display();
+    orderSummary.currentState();
 
     verify(dataStore).getAll();
   }
@@ -38,7 +38,7 @@ public class SummaryInformationTest {
     List<Order> allOrders = Arrays.asList(buildOrderWithPriceOf(new BigDecimal(102)));
     when(dataStore.getAll()).thenReturn(allOrders);
 
-    orderSummary.display();
+    orderSummary.currentState();
 
     verify(liveBoardOrderFormatter).summarise(allOrders);
   }
@@ -49,7 +49,7 @@ public class SummaryInformationTest {
     when(dataStore.getAll()).thenReturn(allOrders);
     when(liveBoardOrderFormatter.summarise(allOrders)).thenReturn("Summarised Data");
 
-    String output = orderSummary.display();
+    String output = orderSummary.currentState();
 
     assertEquals(output, "Summarised Data");
   }

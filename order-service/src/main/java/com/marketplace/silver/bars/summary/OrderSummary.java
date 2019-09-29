@@ -14,7 +14,7 @@ public class OrderSummary {
     this.liveBoardOrderFormatter = liveBoardOrderFormatter;
   }
 
-  public String display() {
+  public String currentState() {
     List<Order> allOrders = dataStore.getAll();
     return liveBoardOrderFormatter.summarise(allOrders);
   }

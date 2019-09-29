@@ -25,7 +25,7 @@ public class LiveBoardOrderFormatterTest {
 
     String output = liveBoardOrderFormatter.summarise(allOrders);
 
-    assertEquals(output, "6.2kg for £200\n");
+    assertEquals(output, "SELL: \n6.2kg for £200\nBUY: \n");
   }
 
   @Test
@@ -38,7 +38,7 @@ public class LiveBoardOrderFormatterTest {
 
     String output = liveBoardOrderFormatter.summarise(allOrders);
 
-    assertEquals(output, "1.4kg for £150\n6.2kg for £200\n");
+    assertEquals(output, "SELL: \n1.4kg for £150\n6.2kg for £200\nBUY: \n");
   }
 
   @Test
@@ -52,7 +52,7 @@ public class LiveBoardOrderFormatterTest {
 
     String output = liveBoardOrderFormatter.summarise(allOrders);
 
-    assertEquals(output, "2.9kg for £150\n6.2kg for £200\n");
+    assertEquals(output, "SELL: \n2.9kg for £150\n6.2kg for £200\nBUY: \n");
   }
 
   @Test
@@ -66,7 +66,7 @@ public class LiveBoardOrderFormatterTest {
 
     String output = liveBoardOrderFormatter.summarise(allOrders);
 
-    assertEquals(output, "6.2kg for £200\n2.9kg for £150\n");
+    assertEquals(output, "SELL: \nBUY: \n6.2kg for £200\n2.9kg for £150\n");
   }
 
   @Test
@@ -75,7 +75,7 @@ public class LiveBoardOrderFormatterTest {
 
     String output = liveBoardOrderFormatter.summarise(noOrders);
 
-    assertEquals(output, "");
+    assertEquals(output, "SELL: \nBUY: \n");
   }
 
   private Order buildOrderWithPriceOf200(OrderType orderType, String userId, double quantity) {
