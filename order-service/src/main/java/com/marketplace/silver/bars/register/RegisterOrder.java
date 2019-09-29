@@ -1,4 +1,7 @@
-package com.marketplace.silver.bars;
+package com.marketplace.silver.bars.register;
+
+import com.marketplace.silver.bars.DataStore;
+import com.marketplace.silver.bars.Order;
 
 public class RegisterOrder {
   private final DataStore dataStore;

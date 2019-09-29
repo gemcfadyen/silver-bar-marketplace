@@ -1,5 +1,11 @@
-package com.marketplace.silver.bars;
+package com.marketplace.silver.bars.register;
 
+import com.marketplace.silver.bars.DataStore;
+import com.marketplace.silver.bars.Order;
+import com.marketplace.silver.bars.OrderBuilder;
+import com.marketplace.silver.bars.OrderType;
+import com.marketplace.silver.bars.register.RegisterOrder;
+import com.marketplace.silver.bars.register.RegisterOrderException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

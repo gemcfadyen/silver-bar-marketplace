@@ -1,5 +1,6 @@
 package com.marketplace.silver.bars;
 
+import com.marketplace.silver.bars.register.RegisterOrder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
