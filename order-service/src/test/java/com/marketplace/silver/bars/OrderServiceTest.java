@@ -1,5 +1,6 @@
 package com.marketplace.silver.bars;
 
+import com.marketplace.silver.bars.cancel.CancelOrder;
 import com.marketplace.silver.bars.register.RegisterOrder;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,11 +12,13 @@ import static org.mockito.Mockito.*;
 public class OrderServiceTest {
   private OrderService orderService;
   private RegisterOrder registerOrder;
+  private CancelOrder cancelOrder;
 
   @BeforeEach
   public void setup() {
     registerOrder = mock(RegisterOrder.class);
-    orderService = new OrderService(registerOrder);
+    cancelOrder = mock(CancelOrder.class);
+    orderService = new OrderService(registerOrder, cancelOrder);
   }
 
   @Test
@@ -31,5 +34,20 @@ public class OrderServiceTest {
     orderService.register(order);
 
     verify(registerOrder).add(order);
+  }
+
+  @Test
+  public void cancelsOrder() {
+    Order order =
+            OrderBuilder.anOrderBuilder()
+                    .withUserId("user1")
+                    .withQuanityOf(3.5f)
+                    .withPricePerKgOf(new BigDecimal(303))
+                    .withOrderType(OrderType.SELL)
+                    .build();
+
+    orderService.cancel(order);
+
+    verify(cancelOrder).cancel(order);
   }
 }
