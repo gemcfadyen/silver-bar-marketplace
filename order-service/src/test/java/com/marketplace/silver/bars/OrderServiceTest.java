@@ -19,11 +19,13 @@ public class OrderServiceTest {
 
   @Test
   public void registersOrder() {
-    String userId = "user1";
-    float quantity = 3.5f;
-    BigDecimal pricePerKg = new BigDecimal(303);
-
-    Order order = new Order(userId, quantity, pricePerKg, OrderType.SELL);
+    Order order =
+        OrderBuilder.anOrderBuilder()
+            .withUserId("user1")
+            .withQuanityOf(3.5f)
+            .withPricePerKgOf(new BigDecimal(303))
+            .withOrderType(OrderType.SELL)
+            .build();
 
     orderService.register(order);
 
