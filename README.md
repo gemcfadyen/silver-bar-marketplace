@@ -20,7 +20,7 @@ git clone git@github.com:gemcfadyen/silverBarsMarketplace.git
 ```
 - Navigate to the root of the project:
 ```
-cd order-service
+cd silver-bar-marketplace 
 ```
 
 - Using the maven build the program and run the tests:
