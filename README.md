@@ -1,4 +1,4 @@
-# Live Order Board 
+# Live Order Board
 Implementation for the Silver Bars Marketplace live order board.
 
 # The Brief
@@ -9,23 +9,23 @@ During this exercise I've made the following assumptions:
  - There should be nothing output to the order board when an order is registered or cancelled.
  - To distinguish between the BUY and SELL orders on the summary, a heading is also output to provide categorisation.
 
-Note: On a real project, such questions would be discussed with the product owner to ensure the output was as they desired. 
+Note: On a real project, such questions would be discussed with the product owner to ensure the output was as they desired.
 
  - an Order object is equal if all the properties are the same. In real life, each order would probably additionally have a unique id.
 
 # To Run
 - clone the repository:
 ```
-git clone git@github.com:gemcfadyen/silverBarsMarketplace.git
+git clone git@github.com:gemcfadyen/silver-bar-marketplace.git
 ```
 - Navigate to the root of the project:
 ```
-cd silver-bar-marketplace 
+cd silver-bar-marketplace
 ```
 
 - Using the maven build the program and run the tests:
 ```
-mvn install 
+mvn install
 ```
 
 In order to demonstrate the application, I created a small demo app which summarises orders that have been registered and cancelled.
