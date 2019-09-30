@@ -34,8 +34,7 @@ In order to demonstrate the application, I created a small demo app which summar
 ```
 mvn package
 
-java -cp target/order-service-1.0.jar com.marketplace.silver.bars.LiveOrderBoardApp
-
+java -cp target/live-order-board-1.0.jar com.marketplace.silver.bars.LiveOrderBoardApp
 ```
 _Alternatively you can invoke the main method of the LiveOrderBoardApp class in your IDE._
 
